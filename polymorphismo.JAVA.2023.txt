@@ -1,0 +1,180 @@
+package college1;
+ 
+/**
+ *
+ * @author gheny  Creat a polymorphismo inside of a college with the staff,teachers,and students
+ */
+public static void main(String[] args) {
+        // TODO code application logic here
+    //person is abstract , is the top one that will be sepate in the classes
+    Staff sarah = new Staff();
+    student ana= new student ();
+    teacher clara = new teacher ();
+    sarah.setWeight(65);
+    sarah.setHeight(173);
+    sarah.setYears (5);
+    sarah.function (); 
+    ana.function();
+    clara.function();
+    }
+    
+}
+
+public abstract class Person {
+    protected double weight;
+    protected int years;
+    protected double height;
+    public abstract void function();
+    public abstract void contry();
+    public abstract void lenguage();
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+    
+}
+
+public class Staff extends Person{
+    @Override
+    public void function() {
+        System.out.println(" Help students and teachers plus administretion");
+    }
+
+    @Override
+    public void contry() {
+        System.out.println(" From Canada or abroad");
+    }
+
+    @Override
+    public void lenguage() {
+        System.out.println(" Need have at least 3 leanguage");}
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+    
+}
+public class student extends Person {
+    public String timeincollege;
+    @Override
+    public void function() {
+        System.out.println(" interniship and study");}
+    @Override
+    public void contry() {
+        System.out.println("abroad");
+    }
+    @Override
+    public void lenguage() {
+            System.out.println("learning english plus another one");
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+    
+}
+package college1;
+
+/**
+ *
+ * @author gheny
+ */
+public class teacher extends Person {
+    public String timeworking; 
+
+    @Override
+    public void function() {
+    System.out.println("Make and update classes");    }
+
+    @Override
+    public void contry() {
+        System.out.println("From Canada");}
+    @Override
+    public void lenguage() {
+        System.out.println(" Advanced english ");}
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public int getYears() {
+        return years;
+    }
+
+    public void setYears(int years) {
+        this.years = years;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+    
+}
